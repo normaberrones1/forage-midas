@@ -18,6 +18,9 @@ class TaskTwoTests {
     private KafkaProducer kafkaProducer;
 
     @Autowired
+    private KafkaTransactionListener kafkaListener;
+
+    @Autowired
     private FileLoader fileLoader;
 
     @Test
@@ -25,6 +28,8 @@ class TaskTwoTests {
         String[] transactionLines = fileLoader.loadStrings("/test_data/poiuytrewq.uiop");
         for (String transactionLine : transactionLines) {
             kafkaProducer.send(transactionLine);
+            kafkaListener.eventListener(transactionLine);
+
         }
         Thread.sleep(2000);
         logger.info("----------------------------------------------------------");

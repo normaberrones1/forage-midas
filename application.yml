@@ -1,2 +1,5 @@
 general:
-  kafka-topic: topic
+  kafka-topic: "transaction"
+  kafka-group-id: "test-group"
+
+
