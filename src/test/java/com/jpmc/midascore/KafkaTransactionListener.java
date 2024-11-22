@@ -10,12 +10,15 @@ import org.springframework.stereotype.Component;
 public class KafkaTransactionListener {
 
     @Value("${general.kafka-topic}")
-    private String kafkaTopic;
+    private String topic;
 
     @KafkaListener(topics = "${general.kafka-topic}", groupId = "${general.kafka-group-id}")
     public void eventListener(String transaction) {
-        log.info(transaction);
+        log.info("Received transaction: " + transaction);
+        System.out.println("Received transaction: " + transaction);
     }
+
+
 
 
 

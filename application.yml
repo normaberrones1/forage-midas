@@ -1,5 +1,7 @@
 general:
-  kafka-topic: "transaction"
+  kafka-topic: "test-topic"
   kafka-group-id: "test-group"
 
-
+spring:
+  application:
+    name: ""
