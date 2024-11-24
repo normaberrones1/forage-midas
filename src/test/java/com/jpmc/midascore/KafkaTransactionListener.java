@@ -16,9 +16,4 @@ public class KafkaTransactionListener {
         log.info("Received transaction: " + transaction);
         System.out.println("Received transaction: " + transaction);
     }
-
-
-
-
-
 }
