@@ -15,6 +15,7 @@ public class UserRecord {
     @Column(nullable = false)
     private float balance;
 
+
     protected UserRecord() {
     }
 
