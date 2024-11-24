@@ -1,18 +1,11 @@
 general:
   kafka-topic: "test-topic"
   kafka-group-id: "test-group"
-  kafka-broker: "localhost:9092"
 
-bootstrap:
-  servers: "localhost:9092"
-  group-id: "test-group"
-  topic: "test-topic"
-  key-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
-  value-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
 
-datasource:
-  driver-class-name: org.h2.Driver
-
-jpa:
-  database-platform: org.hibernate.dialect.H2Dialect
-
+server:
+  port: 9292
