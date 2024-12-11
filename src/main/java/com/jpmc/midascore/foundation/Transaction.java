@@ -1,13 +1,16 @@
 package com.jpmc.midascore.foundation;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.ToString;
 
+@ToString
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Transaction {
     private long senderId;
     private long recipientId;
     private float amount;
 
+    @JsonIgnoreProperties(ignoreUnknown = true)
     public Transaction() {
     }
 
@@ -41,8 +44,8 @@ public class Transaction {
         this.amount = amount;
     }
 
-    @Override
-    public String toString() {
-        return "Transaction {senderId=" + senderId + ", recipientId=" + recipientId + ", amount=" + amount + "}";
-    }
+//    @Override
+//    public String toString() {
+//        return "Transaction {senderId=" + senderId + ", recipientId=" + recipientId + ", amount=" + amount + "}";
+//    }
 }

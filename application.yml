@@ -1,12 +1,6 @@
 general:
-  kafka-topic: "test-topic"
+  kafka-topic: "midas-topic"
   kafka-group-id: "test-group"
-
-spring:
-  kafka:
-    consumer:
-      group-id: "test-group"
-      auto-offset-reset: earliest
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-
+  kafka-broker: "localhost:9092"
+  kafka-producer-timeout: 1000
+  kafka-consumer-timeout: 1000
